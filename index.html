@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        header, footer {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script>
+        function filterList() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let items = document.querySelectorAll('li');
+            items.forEach(item => {
+                if (item.innerText.toLowerCase().includes(input)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bill Payment Services</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="refund.html">Refund Policy</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <input type="text" id="search" onkeyup="filterList()" placeholder="Search for a bill payment service...">
+        <ul>
+            <li><a href="https://www.metrobyt-mobile.com/payment">Metro PCS Pay Bill</a></li>
+            <li><a href="https://www.spectrum.net/billpay">Spectrum Bill Pay</a></li>
+            <li><a href="https://www.xfinity.com/billpay">Xfinity Bill Pay</a></li>
+            <li><a href="https://www.t-mobile.com/payment">T-Mobile Pay Bill</a></li>
+            <li><a href="https://www.verizon.com/billpay">Verizon Pay My Bill</a></li>
+            <li><a href="https://www.att.com/pay">AT&T Bill Pay</a></li>
+            <li><a href="https://www.duke-energy.com/billing">Duke Energy Bill Pay</a></li>
+            <li><a href="https://www.nationalgridus.com/pay">National Grid Bill Pay</a></li>
+            <li><a href="https://www.statefarm.com/customer-care/bill-pay">State Farm Bill Pay</a></li>
+            <li><a href="https://www.amazon.com/gp/css/homepage.html">Amazon Bill Pay</a></li>
+            <li><a href="https://www.bestbuy.com/billpay">Best Buy Bill Pay</a></li>
+            <li><a href="https://www.cox.com/residential/mybill.html">Cox Bill Pay</a></li>
+            <li><a href="https://www.xfinity.com/">Comcast Bill Pay</a></li>
+            <li><a href="https://www.optimum.net/billpay">Optimum Pay Bill</a></li>
+            <li><a href="https://www.questdiagnostics.com/bill">Quest Diagnostics Bill Pay</a></li>
+            <li><a href="https://www.verizon.com/support/billing/">Verizon Wireless Pay Bill</a></li>
+            <li><a href="https://www.xcelenergy.com/account">Xcel Energy Bill Pay</a></li>
+        </ul>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Bill Payment Services. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
