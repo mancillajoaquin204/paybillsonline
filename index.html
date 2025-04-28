@@ -75,6 +75,19 @@
             text-decoration: underline;
         }
     </style>
+	<script>
+        function filterList() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let items = document.querySelectorAll('li');
+            items.forEach(item => {
+                if (item.innerText.toLowerCase().includes(input)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
 
   
 </head>
